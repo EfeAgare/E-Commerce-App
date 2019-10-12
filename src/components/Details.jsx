@@ -48,12 +48,15 @@ export default class Details extends Component {
                <p className="text-muted lead">{item.info}</p>
                <div>
                  <Link to="/">
-                   <ButtonContainer>
+                   <ButtonContainer letter>
                      Back to products
                    </ButtonContainer>
                  </Link>
            
-                   <ButtonContainer disabled={
+                   <ButtonContainer 
+                   cart
+                   letter
+                   disabled={
           item.isCart ? true : false  
           }
           onClick={() => value.addToCart(item.id)}>
