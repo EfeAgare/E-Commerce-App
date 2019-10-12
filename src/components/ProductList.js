@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-
+import Product from './Product';
 class ProductList extends Component {
   state = {  }
   render() { 
-    return ( <div>hello from product list</div> );
+    return ( <Product/> );
   }
 }
  
