@@ -42,6 +42,7 @@ export default class ProductProvider extends Component {
         handleDetail: this.handleDetail,
         addToCart: this.addToCart
       }}>
+        
         {this.props.children}
       </ProductContext.Provider>
     )
