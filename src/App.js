@@ -16,7 +16,7 @@ export default class App extends Component {
       <Navbar/>
       <Switch>
         <Route exact path="/" component={ProductList}/>
-        <Route exact path="/details" component={Details}/>
+        <Route exact path="/details/:id" component={Details}/>
         <Route exact path="/cart" component={Cart}/>
         <Route component={PageNotFound}/>
       </Switch>

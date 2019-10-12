@@ -5,16 +5,33 @@ const ProductContext = React.createContext() // it has both Provider and Consume
 export default class ProductProvider extends Component {
 
   state={
-    products: storeProducts,
+    products: [],
     detailProduct: detailProduct
   }
 
+  componentDidMount() {
+    this.setProducts()
+  }
+  setProducts = () => {
+    let products = [];
+    storeProducts.forEach(item => {
+      const singleItem = {
+        ...item
+      };
+      products = [...products, singleItem]
+    })
+    this.setState(() => {
+      return {
+        products
+      }
+    })
+  }
   handleDetail =() => {
     console.log("hello from details")
   }
 
-  addToCart =() => {
-    console.log("hello from Add to Cart")
+  addToCart =(id) => {
+    console.log(id )
   }
   render() {
     return (
