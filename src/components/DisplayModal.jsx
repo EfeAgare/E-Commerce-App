@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import styled from 'styled-components';
 import { ProductConsumer } from '../contextAPI/contextProvider';
 import { ButtonContainer } from '../styles/Button';
 import { Link } from 'react-router-dom';
