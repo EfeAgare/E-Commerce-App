@@ -20,7 +20,7 @@ export default class Cart extends Component {
             <CartTotals value={value} history={this.props.history}/>
             </Fragment>)
         } else {
-          return <EmptyCart/>
+          return <EmptyCart/> 
         }
       }}
         </ProductConsumer>
