@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import Navbar from './components/Navbar';
 import ProductList from './components/ProductList';
 import Details from './components/Details';
-import Cart from './components/Cart/Cart';
+import Cart from './components/Cart/';
 import PageNotFound from './components/PageNotFound';
 import React, { Component } from 'react'
 import DisplayModal from './components/DisplayModal';
