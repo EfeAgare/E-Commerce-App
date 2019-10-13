@@ -3,7 +3,7 @@ import Title from '../Title';
 import CartColumns from './CartColumns';
 import EmptyCart from './EmptyCart'
 import { ProductConsumer } from '../../contextAPI/contextProvider'
-// import CartList from './CartList'
+import { CartList } from './CartList'
 // import CartTotals from './CartTotals'
 export default class Cart extends Component {
   render() {
@@ -16,6 +16,7 @@ export default class Cart extends Component {
             <Fragment>
             <Title name="your" title="cart"/>
             <CartColumns/>
+            <CartList value={value}/>
             </Fragment>)
         } else {
           return <EmptyCart/>
