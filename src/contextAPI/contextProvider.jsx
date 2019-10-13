@@ -26,12 +26,41 @@ export default class ProductProvider extends Component {
       }
     })
   }
-  handleDetail =() => {
-    console.log("hello from details")
+
+  getItem =(id) => {
+    const product = this.state.products.find(item => item.id === parseInt(id))
+    return product
+
+  }
+  handleDetail =(id) => {
+    const product = this.getItem(id)
+    this.setState(
+      () => {
+        return {
+          detailProduct: product
+        };
+      }
+    )
   }
 
   addToCart =(id) => {
-    console.log(id )
+    let tempProducts = [...this.state.products];
+    const product = this.getItem(id);
+    // const index = tempProducts.indexOf(product);
+    product.inCart = true;
+    product.count = 1;
+    const price = product.price;
+    product.total = price;
+
+    this.setState(() => {
+      return {
+        products: tempProducts,
+        cart: [...this.state.cart, product]
+      }
+    },
+      () => {
+        this.addTotals();
+      })
   }
   render() {
     return (
