@@ -158,8 +158,15 @@ export default class ProductProvider extends Component {
     })
   }
 
-
-
+ // clear cart
+  clearCart = () => {
+    this.setState(()=>{
+      return {cart:[]};
+    }, ()=>{
+      this.setProducts();
+      this.addTotals(); 
+    })
+  }
   
   render() {
     return (
